@@ -1,0 +1,17 @@
+<div class="card mb-2" style="width: 16rem;">
+    <img  alt="Pais" class="card-img-top" [src]="pais.flag" />
+    <div class="card-body">
+        <h5 class="card-title"> {{pais.name}} </h5>
+        <p class="card-text">Informacion general</p>
+        <ul class="list-grup list-grup-flush">
+            <li class="list-grup-item">Capital: {{pais.capital}}</li>
+            <li class="list-grup-item">Idioma: {{pais.languages.name}} </li>
+            <li class="list-grup-item">Población: {{pais.population}} </li>
+        </ul>
+        <div class="d-grig gap-2">
+            <a class="btn btn-primary" routerLink="/detallePais,pais.name">
+                Detalle
+            </a>
+        </div>
+    </div>
+</div>
