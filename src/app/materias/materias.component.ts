@@ -7,17 +7,14 @@ import { MateriasService } from '../services/materias.service';
   templateUrl: './materias.component.html',
   styleUrls: ['./materias.component.css']
 })
-export class MateriasComponent implements OnInit{
+export class MateriasComponent implements OnInit {
+  materias: Materia[] = [];
+  semestre: number = 0;
 
-  semestreSeleccionado:number =1;
-  materias:Materia[]=[];
-
-  constructor(
-    private __materiasService: MateriasService
-  ){
-    this.materias = this.__materiasService.getMaterias();
+  constructor(private __materias: MateriasService) {
+    this.materias = this.__materias.getMaterias();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
 }

@@ -9,14 +9,15 @@ import { PaisesService } from '../../services/paises.service';
 })
 export class DetalleComponent {
 
-  pais:any
+  pais:any = {};
+
   constructor(
     private activatedRoute : ActivatedRoute,
-    private _paisesService: PaisesService
+    private paisesService: PaisesService
   ){
     this.activatedRoute.params.subscribe(params =>{
       const id = params['id'];
-      this._paisesService.getPais(id).subscribe(response =>this.pais =response)
+      this.paisesService.getPais(id).subscribe((pais) =>this.pais =pais)
     });
   }
 

@@ -5,6 +5,7 @@ import { DetalleComponent } from './components/detalle/detalle.component';
 import { PaisesComponent } from './components/paises/paises.component';
 import { DirectivasComponent } from './directivas/directivas.component';
 import { MateriaComponent } from './materia/materia.component';
+import { NuevoUsuarioComponent } from './components/nuevo-usuario/nuevo-usuario.component';
 
 const ROUTES : Routes = [
   {path:'home',component:BodyComponent},
@@ -12,6 +13,7 @@ const ROUTES : Routes = [
   {path:'materias',component:MateriaComponent},
   {path:'paises',component:PaisesComponent},
   {path:'detallePais/:id',component:DetalleComponent},
+  {path:'nuevoUsuario',component:NuevoUsuarioComponent},
   {path:'',redirectTo:'home',pathMatch:'full'}
 ];
 

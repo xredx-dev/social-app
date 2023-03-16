@@ -1,17 +1,16 @@
-<div class="card mb-2" style="width: 16rem;">
-    <img  alt="Pais" class="card-img-top" [src]="pais.flag" />
+<div class="card mb-2" style="width: 17rem;">
+    <img [src]="pais.flags.png" class="card-img-top" [alt]="pais.name.official" />
     <div class="card-body">
-        <h5 class="card-title"> {{pais.name}} </h5>
-        <p class="card-text">Informacion general</p>
-        <ul class="list-grup list-grup-flush">
-            <li class="list-grup-item">Capital: {{pais.capital}}</li>
-            <li class="list-grup-item">Idioma: {{pais.languages.name}} </li>
-            <li class="list-grup-item">Población: {{pais.population}} </li>
-        </ul>
+        <h5 class="card-title">{{ pais.name.official }}</h5>
+        <hr>
+        <div class="container mb-1">
+            <ul class="list-group list-group-flush">
+                <li class="list-item-group">Capital: {{ pais.capital }}</li>
+                <li class="list-item-group">Poblacion: {{ pais.population }}</li>
+            </ul>
+        </div>
         <div class="d-grig gap-2">
-            <a class="btn btn-primary" routerLink="/detallePais,pais.name">
-                Detalle
-            </a>
+            <a [routerLink]="['/pais', pais.name.official]" class="btn btn-primary">Saber mas</a>
         </div>
     </div>
 </div>

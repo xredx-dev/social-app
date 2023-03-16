@@ -7,9 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./tarjeta.component.css']
 })
 export class TarjetaComponent {
-  
-  constructor(){
+
+  constructor() {
   }
-  
-  @Input() pais:any;
+
+  @Input() pais: any;
 }

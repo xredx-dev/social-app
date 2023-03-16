@@ -14,6 +14,7 @@ import { PaisesComponent } from './components/paises/paises.component';
 import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
 import { PaisesService } from './services/paises.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PaisesService } from './services/paises.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     MateriasService,

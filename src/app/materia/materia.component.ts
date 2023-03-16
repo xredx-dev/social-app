@@ -8,11 +8,9 @@ import { Materia } from '../interfaces/Materia';
 })
 export class MateriaComponent implements OnInit{
   
-  
-  constructor(){
-  }
   @Input() materia = {} as Materia;
   
-
+  constructor(){}
+  
   ngOnInit(){}
 }
